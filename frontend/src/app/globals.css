@@ -1,0 +1,145 @@
+/* Neo-brutalism CSS Variables */
+:root {
+  --color-primary: #FFE500;
+  --color-secondary: #FF5C00;
+  --color-accent: #00C2FF;
+  --color-bg: #FFFFFF;
+  --color-dark: #111111;
+  --border: 3px solid #111111;
+  --shadow: 4px 4px 0px #111111;
+  --radius: 0px;
+  --font-mono: 'Courier New', Courier, monospace;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-mono);
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  min-height: 100vh;
+}
+
+/* Neo-brutalism Button */
+.btn {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  font-family: var(--font-mono);
+  padding: 8px 16px;
+  background-color: var(--color-primary);
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.1s;
+  border-radius: var(--radius);
+  text-decoration: none;
+  display: inline-block;
+  color: var(--color-dark);
+  font-size: 0.875rem;
+}
+
+.btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #111111;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #111111;
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.btn-danger {
+  background-color: #FF0000;
+  color: #FFFFFF;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.btn-ghost:hover {
+  box-shadow: var(--shadow);
+}
+
+/* Neo-brutalism Input */
+input[type="text"],
+input[type="email"],
+input[type="date"],
+textarea,
+select {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: 8px 12px;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+  border-radius: var(--radius);
+  width: 100%;
+  outline: none;
+  transition: box-shadow 0.1s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+  box-shadow: 6px 6px 0px #111111;
+}
+
+/* Neo-brutalism Card */
+.card {
+  border: var(--border);
+  box-shadow: var(--shadow);
+  padding: 16px;
+  background-color: var(--color-bg);
+  border-radius: var(--radius);
+}
+
+/* Error message */
+.field-error {
+  color: #FF0000;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-top: 4px;
+  display: block;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
